@@ -1,0 +1,54 @@
+# functional 
+
+def flatten_and_sort(array):
+    arr = []
+    for item in array:
+        for i in item:
+            arr.append(i)
+    return sorted(arr)
+
+# How does this solution ensure data immutability?
+  # this piece of code shouldn't be modified or deleted. 
+  
+# Is this solution a pure function? Why or why not?
+  # yes because the output value follows solely from the input values. 
+  
+# Is this solution a higher order function? Why or why not?
+  # yes because there is a function within a function.
+
+# Would it have been easier to solve this problem using a different programming style?
+  # it depends on the user
+
+# Why in particular is functional programming a helpful paradigm when solving this problem?
+  # it tries to keep the code clean by avoiding state changes.
+
+
+
+# Object Oriented
+
+class Podracer:
+  def __init__(self, max_speed, condition, price):
+    self.max_speed = max_speed
+    self.condition = condition
+    self.price = price
+
+  def repair(self):
+    self.condition = "repaired"
+    
+class AnakinsPod(Podracer):
+  def __init__(self, max_speed, condition, price):
+    super.init(max_speed, condition, price)
+  
+  def boost(self):
+    self.max_speed *= 2
+    
+class SebulbasPod(Podracer):
+  def __init__(self, max_speed, condition, price):
+    super.init(max_speed, condition, price)
+  
+  def flame_jet(self,other):
+    other.condition = "trashed"
+
+# How does this solution demonstrate the four pillars of OOP? (It may not demonstrate all of them, describe only those that apply)
+  # Encapsulation: it is enclosing the code 
+  # Inheritance: defined a class that inherited the methods of the previous class 
